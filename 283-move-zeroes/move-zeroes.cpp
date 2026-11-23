@@ -12,11 +12,12 @@ public:
                 j++;
             }
         }
-        for (int i = 0; i < nums.size(); i++)
+        for (int i = 0; i < nums.size(); i++) {
             if (j > 0) 
                 nums[i] = hm[i];
             else 
                 nums[i] = 0;
             j--;
         }
+    }
 };
