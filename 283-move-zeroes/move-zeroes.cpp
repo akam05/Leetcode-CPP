@@ -1,7 +1,17 @@
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
-        unordered_map<int, int> hm;
+        int left = 0;
+        int right = 0;
+        while(right < nums.size()) {
+            if (nums[right] != 0) {
+                swap(nums[left], nums[right]);
+                left++;
+            }
+            right++;
+        }
+        
+        /*unordered_map<int, int> hm;
         int j = 0;
         int zero = 0;
         for (int i = 0; i < nums.size(); i++) {
@@ -19,5 +29,6 @@ public:
                 nums[i] = 0;
             j--;
         }
+        */
     }
 };
