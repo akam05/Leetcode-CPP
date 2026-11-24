@@ -5,7 +5,9 @@ public:
         int right = 0;
         while(right < nums.size()) {
             if (nums[right] != 0) {
-                swap(nums[left], nums[right]);
+                int temp = nums[left];
+                nums[left] = nums[right];
+                nums[right] = temp;
                 left++;
             }
             right++;
